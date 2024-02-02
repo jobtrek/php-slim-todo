@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"watch": "tailwindcss -i ./templates/main.css -o ./public/assets/main.css --watch"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.4.1"
+	}
+}
