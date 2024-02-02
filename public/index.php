@@ -1,5 +1,6 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
@@ -21,7 +22,7 @@ $db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../databa
 
 // Show all todos
 $app->get('/', function (Request $request, Response $response, $args) use ($db) {
-    $todos = \Jobtrek\PhpSlimTodo\TodoService::getUnFinishedTodos($db);
+    $todos = TodoService::getUnFinishedTodos($db);
     return Twig::fromRequest($request)->render(
         $response,
         'home.twig',
@@ -31,7 +32,7 @@ $app->get('/', function (Request $request, Response $response, $args) use ($db) 
 
 // See done todos
 $app->get('/done', function (Request $request, Response $response, $args) use ($db) {
-    $todos = \Jobtrek\PhpSlimTodo\TodoService::getFinishedTodos($db);
+    $todos = TodoService::getFinishedTodos($db);
     return Twig::fromRequest($request)->render(
         $response,
         'home.twig',
@@ -40,11 +41,37 @@ $app->get('/done', function (Request $request, Response $response, $args) use ($
 })->setName('done');
 
 // Add new todo
-$app->post('/new-todo', function (Request $request, Response $response, $args) use ($db) {
+$app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
     $data = $request->getParsedBody();
-    \Jobtrek\PhpSlimTodo\TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
+    TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
     return $response->withHeader('Location', '/')->withStatus(302);
 })->setName('new-todo');
+
+// Update todo
+$app->post('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
+    $data = $request->getParsedBody();
+    TodoService::updateTodo(
+        $db,
+        $args['id'],
+        $data['title'],
+        $data['description'],
+        $data['due_at']
+    );
+    return $response->withHeader('Location', '/')->withStatus(302);
+})->setName('update-todo');
+
+// Edit todo
+$app->get('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
+    $todo = TodoService::getTodoById($db, $args['id']);
+    if (!$todo) {
+        return $response->withHeader('Location', '/')->withStatus(302);
+    }
+    return Twig::fromRequest($request)->render(
+        $response,
+        'edit.twig',
+        ['todo' => $todo]
+    );
+})->setName('edit-todo');
 
 // Run app
 $app->run();
