@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/jobtrek/php-slim-todo/compare/v0.1.1...v0.1.2) (2024-02-02)
+
+
+### Bug Fixes
+
+* Add info to create db and compile tailwind ([d9c4a65](https://github.com/jobtrek/php-slim-todo/commit/d9c4a65c8010edce8862d835bbf2e2215f9f66ab))
+
 ## [0.1.1](https://github.com/jobtrek/php-slim-todo/compare/v0.1.0...v0.1.1) (2024-02-02)
 
 
