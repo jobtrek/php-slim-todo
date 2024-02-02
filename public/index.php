@@ -22,10 +22,22 @@ $db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../databa
 /**
 * Routes declarations
  */
-$app->get('/', function (Request $request, Response $response, $args) {
-    $todos = \Jobtrek\PhpSlimTodo\TodoService::getAllTotdos($db);
-    return Twig::fromRequest($request)->render($response, 'home.twig');
+$app->get('/', function (Request $request, Response $response, $args) use ($db) {
+    $todos = \Jobtrek\PhpSlimTodo\TodoService::getUnFinishedTodos($db);
+    return Twig::fromRequest($request)->render(
+        $response,
+        'home.twig',
+        ['todos' => $todos, 'title' => 'Todo List']
+    );
 })->setName('home');
+$app->get('/done', function (Request $request, Response $response, $args) use ($db) {
+    $todos = \Jobtrek\PhpSlimTodo\TodoService::getFinishedTodos($db);
+    return Twig::fromRequest($request)->render(
+        $response,
+        'home.twig',
+        ['todos' => $todos, 'title' => 'Done todos']
+    );
+})->setName('done');
 
 // Run app
 $app->run();

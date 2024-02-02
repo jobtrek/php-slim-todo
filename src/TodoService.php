@@ -6,9 +6,18 @@ use PDO;
 
 class TodoService
 {
-    public static function getAllTotdos(PDO $db): array
+    public static function getAllTodos(PDO $db): array
     {
-        $db->query('SELECT * FROM todos');
+        return $db->query('SELECT * FROM todo')->fetchAll();
     }
 
+    public static function getUnFinishedTodos(PDO $db): array
+    {
+        return $db->query('SELECT * FROM todo WHERE finished = 0')->fetchAll();
+    }
+
+    public static function getFinishedTodos(PDO $db): array
+    {
+        return $db->query('SELECT * FROM todo WHERE finished = 1')->fetchAll();
+    }
 }
