@@ -17,10 +17,13 @@ $app->add(TwigMiddleware::create($app, $twig));
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
+$db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../database.db');
+
 /**
 * Routes declarations
  */
 $app->get('/', function (Request $request, Response $response, $args) {
+    $todos = \Jobtrek\PhpSlimTodo\TodoService::getAllTotdos($db);
     return Twig::fromRequest($request)->render($response, 'home.twig');
 })->setName('home');
 

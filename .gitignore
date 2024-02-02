@@ -3,3 +3,4 @@
 cache
 public/assets
 node_modules
+database.db
