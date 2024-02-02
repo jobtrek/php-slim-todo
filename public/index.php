@@ -19,9 +19,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 $db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../database.db');
 
-/**
-* Routes declarations
- */
+// Show all todos
 $app->get('/', function (Request $request, Response $response, $args) use ($db) {
     $todos = \Jobtrek\PhpSlimTodo\TodoService::getUnFinishedTodos($db);
     return Twig::fromRequest($request)->render(
@@ -30,6 +28,8 @@ $app->get('/', function (Request $request, Response $response, $args) use ($db) 
         ['todos' => $todos, 'title' => 'Todo List']
     );
 })->setName('home');
+
+// See done todos
 $app->get('/done', function (Request $request, Response $response, $args) use ($db) {
     $todos = \Jobtrek\PhpSlimTodo\TodoService::getFinishedTodos($db);
     return Twig::fromRequest($request)->render(
@@ -38,6 +38,13 @@ $app->get('/done', function (Request $request, Response $response, $args) use ($
         ['todos' => $todos, 'title' => 'Done todos']
     );
 })->setName('done');
+
+// Add new todo
+$app->post('/new-todo', function (Request $request, Response $response, $args) use ($db) {
+    $data = $request->getParsedBody();
+    \Jobtrek\PhpSlimTodo\TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
+    return $response->withHeader('Location', '/')->withStatus(302);
+})->setName('new-todo');
 
 // Run app
 $app->run();
