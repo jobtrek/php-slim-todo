@@ -10,7 +10,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$twig = Twig::create(__DIR__ . '/../templates', ['cache' => __DIR__ . '/../cache']);
+$twig = Twig::create(__DIR__ . '/../templates', ['cache' => false/*__DIR__ . '/../cache'*/]);
 
 $app->addRoutingMiddleware();
 $app->add(TwigMiddleware::create($app, $twig));
@@ -22,7 +22,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
  */
 $app->get('/', function (Request $request, Response $response, $args) {
     return Twig::fromRequest($request)->render($response, 'home.twig');
-});
+})->setName('home');
 
 // Run app
 $app->run();
