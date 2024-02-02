@@ -23,6 +23,10 @@ $db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../databa
 // Show all todos
 $app->get('/', function (Request $request, Response $response, $args) use ($db) {
     $todos = TodoService::getUnFinishedTodos($db);
+    $todos = array_map(function ($todo) {
+        $todo['due_at'] = (new Carbon\Carbon($todo['due_at']))->diffForHumans();
+        return $todo;
+    }, $todos);
     return Twig::fromRequest($request)->render(
         $response,
         'home.twig',
