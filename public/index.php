@@ -73,5 +73,23 @@ $app->get('/todo/{id}', function (Request $request, Response $response, $args) u
     );
 })->setName('edit-todo');
 
+// Delete todo
+$app->get('/todo/delete/{id}', function (Request $request, Response $response, $args) use ($db) {
+    TodoService::deleteTodoById($db, $args['id']);
+    return $response->withHeader('Location', '/')->withStatus(302);
+})->setName('edit-todo');
+
+// Tick todo
+$app->get('/todo/finished/{id}', function (Request $request, Response $response, $args) use ($db) {
+    TodoService::setTodoToFinished($db, $args['id']);
+    return $response->withHeader('Location', '/')->withStatus(302);
+})->setName('edit-todo');
+
+// Untick todo
+$app->get('/todo/un-finish/{id}', function (Request $request, Response $response, $args) use ($db) {
+    TodoService::setTodoToUnFinished($db, $args['id']);
+    return $response->withHeader('Location', '/')->withStatus(302);
+})->setName('edit-todo');
+
 // Run app
 $app->run();

@@ -36,8 +36,26 @@ class TodoService
 
     public static function getTodoById(PDO $db, mixed $id): array
     {
-        $stmt = $db->prepare('SELECT * FROM todo WHERE id = :id');
+        $stmt = $db->prepare('select * from todo where id = :id');
         $stmt->execute(['id' => $id]);
         return $stmt->fetch();
+    }
+
+    public static function deleteTodoById(PDO $db, mixed $id): void
+    {
+        $stmt = $db->prepare('delete from todo where id = :id');
+        $stmt->execute(['id' => $id]);
+    }
+
+    public static function setTodoToFinished(PDO $db, mixed $id): void
+    {
+        $db->prepare('update todo set finished = true where id = ?')
+            ->execute([$id]);
+    }
+
+    public static function setTodoToUnFinished(PDO $db, mixed $id): void
+    {
+        $db->prepare('update todo set finished = false where id = ?')
+            ->execute([$id]);
     }
 }
