@@ -1,5 +1,7 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\Session;
+use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -13,7 +15,10 @@ $app = AppFactory::create();
 
 $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false/*__DIR__ . '/../cache'*/]);
 
+// Register a session middleware
+$app->add(new SessionMiddleware());
 $app->addRoutingMiddleware();
+
 $app->add(TwigMiddleware::create($app, $twig));
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
