@@ -1,4 +1,4 @@
-name: Check PHP code style
+name: PHP psr12 code style verification
 # Inspired from https://github.com/laravel/.github/blob/main/.github/workflows/coding-standards.yml
 
 on:
