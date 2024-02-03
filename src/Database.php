@@ -6,7 +6,7 @@ use PDO;
 
 class Database
 {
-    public static function getDatabaseConnection(string $path): \PDO
+    public static function getDatabaseConnection(string $path): PDO
     {
         $dsn = "sqlite:$path";
         $options = [

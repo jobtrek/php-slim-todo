@@ -6,35 +6,80 @@ use PDO;
 
 class TodoService
 {
+    /**
+     * @return array{
+     *      'id': int,
+     *      'title': string,
+     *      'description': string,
+     *      'due_at': string,
+     *      'finished': int
+     * }
+     */
     public static function getAllTodos(PDO $db): array
     {
         return $db->query('select * from todo')->fetchAll();
     }
 
+    /**
+     * @return array{
+     *      'id': int,
+     *      'title': string,
+     *      'description': string,
+     *      'due_at': string,
+     *      'finished': int
+     * }
+     */
     public static function getUnFinishedTodos(PDO $db): array
     {
         return $db->query('select * from todo where finished = 0')->fetchAll();
     }
 
+    /**
+     * @return array{
+     *      'id': int,
+     *      'title': string,
+     *      'description': string,
+     *      'due_at': string,
+     *      'finished': int
+     * }
+     */
     public static function getFinishedTodos(PDO $db): array
     {
         return $db->query('select * from todo where finished = 1')->fetchAll();
     }
 
-    public static function createNewTodo(PDO $db, string $title, string $description, string $due_at): void
-    {
+    public static function createNewTodo(
+        PDO $db,
+        string $title,
+        string $description,
+        string $due_at
+    ): void {
         $db->prepare('insert into todo (title, description, due_at) values (?, ?, ?)')->execute(
             [$title, $description, $due_at]
         );
     }
 
-    public static function updateTodo(PDO $db, int $id, string $title, string $description, string $due_at): void
-    {
+    public static function updateTodo(
+        PDO $db,
+        int $id,
+        string $title,
+        string $description,
+        string $due_at
+    ): void {
         $db->prepare('update todo set title = ?, description = ?, due_at = ? where id = ?')
             ->execute([$title, $description, $due_at, $id]);
     }
 
-    public static function getTodoById(PDO $db, mixed $id): array
+    /**
+     * @return array{
+     *      'id': int,
+     *      'title': string,
+     *      'description': string,
+     *      'due_at': string,
+     *      'finished': int
+     * } | false
+     */
+    public static function getTodoById(PDO $db, mixed $id): array | false
     {
         $stmt = $db->prepare('select * from todo where id = :id');
         $stmt->execute(['id' => $id]);

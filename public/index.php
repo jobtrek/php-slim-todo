@@ -23,7 +23,7 @@ $db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../databa
 // Show all todos
 $app->get('/', function (Request $request, Response $response, $args) use ($db) {
     $todos = TodoService::getUnFinishedTodos($db);
-    $todos = array_map(function ($todo) {
+    $todos = array_map(static function ($todo) {
         $todo['due_at'] = (new Carbon\Carbon($todo['due_at']))->diffForHumans();
         return $todo;
     }, $todos);
