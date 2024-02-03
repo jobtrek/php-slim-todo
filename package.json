@@ -1,11 +1,19 @@
 {
-	"scripts": {
-		"watch": "tailwindcss -i ./templates/main.css -o ./public/assets/main.css --watch"
-	},
-	"devDependencies": {
-		"tailwindcss": "^3.4.1"
-	},
-	"dependencies": {
-		"@tailwindcss/forms": "^0.5.7"
-	}
+  "scripts": {
+    "cz": "cz",
+    "watch": "tailwindcss -i ./templates/main.css -o ./public/assets/main.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
