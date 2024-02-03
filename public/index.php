@@ -35,7 +35,11 @@ $app->get('/', function (Request $request, Response $response, $args) use ($db) 
     return Twig::fromRequest($request)->render(
         $response,
         'home.twig',
-        ['todos' => $todos, 'title' => 'Todo List']
+        [
+            'todos' => $todos,
+            'title' => 'Todo List',
+            'message' => Session::getInstance()->getAndForgetSessionKey('message')
+        ]
     );
 })->setName('home');
 
@@ -53,6 +57,7 @@ $app->get('/done', function (Request $request, Response $response, $args) use ($
 $app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
     $data = $request->getParsedBody();
     TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
+    Session::getInstance()->setSessionKey('message', 'Todo created successfully');
     return $response->withHeader('Location', '/')->withStatus(302);
 })->setName('new-todo');
 

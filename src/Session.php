@@ -35,10 +35,17 @@ class Session
 
     public function getSessionKey(string $key): mixed
     {
-        return $_SESSION[$key];
+        return $_SESSION[$key] ?? null;
     }
 
-    public function clearSessionKeys(string $key): void
+    public function getAndForgetSessionKey(string $key): mixed
+    {
+        $val = $this->getSessionKey($key);
+        $this->clearSessionKey($key);
+        return $val;
+    }
+
+    public function clearSessionKey(string $key): void
     {
         unset($_SESSION[$key]);
     }
