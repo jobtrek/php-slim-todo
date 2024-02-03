@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.3](https://github.com/jobtrek/php-slim-todo/compare/v0.1.2...v0.1.3) (2024-02-03)
+
+
+### Features
+
+* session support ([#4](https://github.com/jobtrek/php-slim-todo/issues/4)) ([4efa7f9](https://github.com/jobtrek/php-slim-todo/commit/4efa7f92e6d6d1c61e2238735e15f7be052bc413))
+
+
+### Miscellaneous Chores
+
+* add commitizen ([1506fe7](https://github.com/jobtrek/php-slim-todo/commit/1506fe76f6d8ba444deb8683aee32499d8d85486))
+* add contributing guidelines ([4958443](https://github.com/jobtrek/php-slim-todo/commit/495844339b01cfee88e2beb7d59a2974d955283c))
+* add licence file ([369a76d](https://github.com/jobtrek/php-slim-todo/commit/369a76dbdbcd9a962893c86548bfa7d5aff57ebf))
+* Add phpstan for static analysis ([11a3a5a](https://github.com/jobtrek/php-slim-todo/commit/11a3a5a45cc7b8b53ea01bfffd2f0046b8b2bcb0))
+* move contributing to .github for cleaner tree ([3288afc](https://github.com/jobtrek/php-slim-todo/commit/3288afc872a99adf8f6090b10f5d250535681d4c))
+
 ## [0.1.2](https://github.com/jobtrek/php-slim-todo/compare/v0.1.1...v0.1.2) (2024-02-02)
 
 
