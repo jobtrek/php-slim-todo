@@ -1,5 +1,7 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\Session;
+use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -13,7 +15,10 @@ $app = AppFactory::create();
 
 $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false/*__DIR__ . '/../cache'*/]);
 
+// Register a session middleware
+$app->add(new SessionMiddleware());
 $app->addRoutingMiddleware();
+
 $app->add(TwigMiddleware::create($app, $twig));
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
@@ -30,7 +35,11 @@ $app->get('/', function (Request $request, Response $response, $args) use ($db) 
     return Twig::fromRequest($request)->render(
         $response,
         'home.twig',
-        ['todos' => $todos, 'title' => 'Todo List']
+        [
+            'todos' => $todos,
+            'title' => 'Todo List',
+            'message' => Session::getInstance()->getAndForgetSessionKey('message')
+        ]
     );
 })->setName('home');
 
@@ -48,6 +57,7 @@ $app->get('/done', function (Request $request, Response $response, $args) use ($
 $app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
     $data = $request->getParsedBody();
     TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
+    Session::getInstance()->setSessionKey('message', 'Todo created successfully');
     return $response->withHeader('Location', '/')->withStatus(302);
 })->setName('new-todo');
 
