@@ -3,6 +3,7 @@
 use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
 use Jobtrek\PhpSlimTodo\Actions\UpdateTodoAction;
 use Jobtrek\PhpSlimTodo\Pages\DoneTodosPage;
+use Jobtrek\PhpSlimTodo\Pages\EditTodoPage;
 use Jobtrek\PhpSlimTodo\Pages\HomePage;
 use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
@@ -39,17 +40,7 @@ $app->post('/todo/create', CreateTodoAction::class)->setName('new-todo');
 $app->post('/todo/{id}', UpdateTodoAction::class)->setName('update-todo');
 
 // Edit todo
-$app->get('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
-    $todo = TodoService::getTodoById($db, $args['id']);
-    if (!$todo) {
-        return $response->withHeader('Location', '/')->withStatus(302);
-    }
-    return Twig::fromRequest($request)->render(
-        $response,
-        'edit.twig',
-        ['todo' => $todo]
-    );
-})->setName('edit-todo');
+$app->get('/todo/{id}', EditTodoPage::class)->setName('edit-todo');
 
 // Delete todo
 $app->get('/todo/delete/{id}', function (Request $request, Response $response, $args) use ($db) {
