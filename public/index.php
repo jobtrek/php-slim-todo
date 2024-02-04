@@ -1,5 +1,6 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
 use Jobtrek\PhpSlimTodo\Actions\DoneTodosAction;
 use Jobtrek\PhpSlimTodo\Actions\HomePageAction;
 use Jobtrek\PhpSlimTodo\Session;
@@ -32,12 +33,7 @@ $app->get('/', HomePageAction::class)->setName('home');
 $app->get('/done', DoneTodosAction::class)->setName('done');
 
 // Add new todo
-$app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
-    $data = $request->getParsedBody();
-    TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
-    Session::getInstance()->setSessionKey('message', 'Todo created successfully');
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('new-todo');
+$app->post('/todo/create', CreateTodoAction::class)->setName('new-todo');
 
 // Update todo
 $app->post('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
