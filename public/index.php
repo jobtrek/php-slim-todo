@@ -1,9 +1,9 @@
 <?php
 
 use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
-use Jobtrek\PhpSlimTodo\Actions\DoneTodosAction;
-use Jobtrek\PhpSlimTodo\Actions\HomePageAction;
-use Jobtrek\PhpSlimTodo\Session;
+use Jobtrek\PhpSlimTodo\Actions\UpdateTodoAction;
+use Jobtrek\PhpSlimTodo\Pages\DoneTodosPage;
+use Jobtrek\PhpSlimTodo\Pages\HomePage;
 use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -27,26 +27,16 @@ $app->add(TwigMiddleware::create($app, $twig));
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 // Show all todos
-$app->get('/', HomePageAction::class)->setName('home');
+$app->get('/', HomePage::class)->setName('home');
 
 // See done todos
-$app->get('/done', DoneTodosAction::class)->setName('done');
+$app->get('/done', DoneTodosPage::class)->setName('done');
 
 // Add new todo
 $app->post('/todo/create', CreateTodoAction::class)->setName('new-todo');
 
 // Update todo
-$app->post('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
-    $data = $request->getParsedBody();
-    TodoService::updateTodo(
-        $db,
-        $args['id'],
-        $data['title'],
-        $data['description'],
-        $data['due_at']
-    );
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('update-todo');
+$app->post('/todo/{id}', UpdateTodoAction::class)->setName('update-todo');
 
 // Edit todo
 $app->get('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {

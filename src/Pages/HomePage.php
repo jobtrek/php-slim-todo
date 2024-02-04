@@ -1,6 +1,6 @@
 <?php
 
-namespace Jobtrek\PhpSlimTodo\Actions;
+namespace Jobtrek\PhpSlimTodo\Pages;
 
 use Carbon\Carbon;
 use Jobtrek\PhpSlimTodo\Database;
@@ -9,11 +9,8 @@ use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\Twig;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 
-class HomePageAction
+class HomePage
 {
     public function __invoke(
         ServerRequestInterface $request,
