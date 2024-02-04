@@ -1,5 +1,6 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\Actions\HomePageAction;
 use Jobtrek\PhpSlimTodo\Session;
 use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
@@ -23,25 +24,8 @@ $app->add(TwigMiddleware::create($app, $twig));
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
-$db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../database.db');
-
 // Show all todos
-$app->get('/', function (Request $request, Response $response, $args) use ($db) {
-    $todos = TodoService::getUnFinishedTodos($db);
-    $todos = array_map(static function ($todo) {
-        $todo['due_at'] = (new Carbon\Carbon($todo['due_at']))->diffForHumans();
-        return $todo;
-    }, $todos);
-    return Twig::fromRequest($request)->render(
-        $response,
-        'home.twig',
-        [
-            'todos' => $todos,
-            'title' => 'Todo List',
-            'message' => Session::getInstance()->getAndForgetSessionKey('message')
-        ]
-    );
-})->setName('home');
+$app->get('/', HomePageAction::class)->setName('home');
 
 // See done todos
 $app->get('/done', function (Request $request, Response $response, $args) use ($db) {

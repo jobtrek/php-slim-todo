@@ -7,4 +7,4 @@ parameters:
         -
             message: "#^Offset 'due_at' does not exist on int\\|string\\.$#"
             count: 1
-            path: public/index.php
+            path: src/Actions/HomePageAction.php
