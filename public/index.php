@@ -1,6 +1,7 @@
 <?php
 
 use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
+use Jobtrek\PhpSlimTodo\Actions\DeleteTodoAction;
 use Jobtrek\PhpSlimTodo\Actions\UpdateTodoAction;
 use Jobtrek\PhpSlimTodo\Pages\DoneTodosPage;
 use Jobtrek\PhpSlimTodo\Pages\EditTodoPage;
@@ -43,10 +44,7 @@ $app->post('/todo/{id}', UpdateTodoAction::class)->setName('update-todo');
 $app->get('/todo/{id}', EditTodoPage::class)->setName('edit-todo');
 
 // Delete todo
-$app->get('/todo/delete/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::deleteTodoById($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/delete/{id}', DeleteTodoAction::class)->setName('edit-todo');
 
 // Tick todo
 $app->get('/todo/finished/{id}', function (Request $request, Response $response, $args) use ($db) {
