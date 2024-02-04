@@ -1,5 +1,6 @@
 <?php
 
+use Jobtrek\PhpSlimTodo\Actions\DoneTodosAction;
 use Jobtrek\PhpSlimTodo\Actions\HomePageAction;
 use Jobtrek\PhpSlimTodo\Session;
 use Jobtrek\PhpSlimTodo\SessionMiddleware;
@@ -28,14 +29,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 $app->get('/', HomePageAction::class)->setName('home');
 
 // See done todos
-$app->get('/done', function (Request $request, Response $response, $args) use ($db) {
-    $todos = TodoService::getFinishedTodos($db);
-    return Twig::fromRequest($request)->render(
-        $response,
-        'home.twig',
-        ['todos' => $todos, 'title' => 'Done todos']
-    );
-})->setName('done');
+$app->get('/done', DoneTodosAction::class)->setName('done');
 
 // Add new todo
 $app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
