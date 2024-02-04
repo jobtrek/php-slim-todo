@@ -2,6 +2,8 @@
 
 use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
 use Jobtrek\PhpSlimTodo\Actions\DeleteTodoAction;
+use Jobtrek\PhpSlimTodo\Actions\MarkTodoAsDoneAction;
+use Jobtrek\PhpSlimTodo\Actions\MarkTodoAsUnDoneAction;
 use Jobtrek\PhpSlimTodo\Actions\UpdateTodoAction;
 use Jobtrek\PhpSlimTodo\Pages\DoneTodosPage;
 use Jobtrek\PhpSlimTodo\Pages\EditTodoPage;
@@ -47,16 +49,10 @@ $app->get('/todo/{id}', EditTodoPage::class)->setName('edit-todo');
 $app->get('/todo/delete/{id}', DeleteTodoAction::class)->setName('edit-todo');
 
 // Tick todo
-$app->get('/todo/finished/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::setTodoToFinished($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/finished/{id}', MarkTodoAsDoneAction::class)->setName('edit-todo');
 
 // Untick todo
-$app->get('/todo/un-finish/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::setTodoToUnFinished($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/un-finish/{id}', MarkTodoAsUnDoneAction::class)->setName('edit-todo');
 
 // Run app
 $app->run();
