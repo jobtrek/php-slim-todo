@@ -6,14 +6,31 @@ use PDO;
 
 class Database
 {
-    public static function getDatabaseConnection(string $path): PDO
+    private static null|Database $instance = null;
+
+    private PDO $db;
+
+    private function __construct()
     {
-        $dsn = "sqlite:$path";
+        $dsn = "sqlite:". __DIR__ . '/../database.db';
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES   => false,
         ];
-        return new PDO($dsn, null, null, $options);
+        $this->db = new PDO($dsn, null, null, $options);
+    }
+
+    public static function getInstance(): Database
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    public function getDb(): PDO
+    {
+        return $this->db;
     }
 }

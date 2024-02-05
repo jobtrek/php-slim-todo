@@ -1,6 +1,13 @@
 <?php
 
-use Jobtrek\PhpSlimTodo\Session;
+use Jobtrek\PhpSlimTodo\Actions\CreateTodoAction;
+use Jobtrek\PhpSlimTodo\Actions\DeleteTodoAction;
+use Jobtrek\PhpSlimTodo\Actions\MarkTodoAsDoneAction;
+use Jobtrek\PhpSlimTodo\Actions\MarkTodoAsUnDoneAction;
+use Jobtrek\PhpSlimTodo\Actions\UpdateTodoAction;
+use Jobtrek\PhpSlimTodo\Pages\DoneTodosPage;
+use Jobtrek\PhpSlimTodo\Pages\EditTodoPage;
+use Jobtrek\PhpSlimTodo\Pages\HomePage;
 use Jobtrek\PhpSlimTodo\SessionMiddleware;
 use Jobtrek\PhpSlimTodo\TodoService;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -23,87 +30,29 @@ $app->add(TwigMiddleware::create($app, $twig));
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
-$db = \Jobtrek\PhpSlimTodo\Database::getDatabaseConnection(__DIR__ . '/../database.db');
-
 // Show all todos
-$app->get('/', function (Request $request, Response $response, $args) use ($db) {
-    $todos = TodoService::getUnFinishedTodos($db);
-    $todos = array_map(static function ($todo) {
-        $todo['due_at'] = (new Carbon\Carbon($todo['due_at']))->diffForHumans();
-        return $todo;
-    }, $todos);
-    return Twig::fromRequest($request)->render(
-        $response,
-        'home.twig',
-        [
-            'todos' => $todos,
-            'title' => 'Todo List',
-            'message' => Session::getInstance()->getAndForgetSessionKey('message')
-        ]
-    );
-})->setName('home');
+$app->get('/', HomePage::class)->setName('home');
 
 // See done todos
-$app->get('/done', function (Request $request, Response $response, $args) use ($db) {
-    $todos = TodoService::getFinishedTodos($db);
-    return Twig::fromRequest($request)->render(
-        $response,
-        'home.twig',
-        ['todos' => $todos, 'title' => 'Done todos']
-    );
-})->setName('done');
+$app->get('/done', DoneTodosPage::class)->setName('done');
 
 // Add new todo
-$app->post('/todo/create', function (Request $request, Response $response, $args) use ($db) {
-    $data = $request->getParsedBody();
-    TodoService::createNewTodo($db, $data['title'], $data['description'], $data['due_at']);
-    Session::getInstance()->setSessionKey('message', 'Todo created successfully');
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('new-todo');
+$app->post('/todo/create', CreateTodoAction::class)->setName('new-todo');
 
 // Update todo
-$app->post('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
-    $data = $request->getParsedBody();
-    TodoService::updateTodo(
-        $db,
-        $args['id'],
-        $data['title'],
-        $data['description'],
-        $data['due_at']
-    );
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('update-todo');
+$app->post('/todo/{id}', UpdateTodoAction::class)->setName('update-todo');
 
 // Edit todo
-$app->get('/todo/{id}', function (Request $request, Response $response, $args) use ($db) {
-    $todo = TodoService::getTodoById($db, $args['id']);
-    if (!$todo) {
-        return $response->withHeader('Location', '/')->withStatus(302);
-    }
-    return Twig::fromRequest($request)->render(
-        $response,
-        'edit.twig',
-        ['todo' => $todo]
-    );
-})->setName('edit-todo');
+$app->get('/todo/{id}', EditTodoPage::class)->setName('edit-todo');
 
 // Delete todo
-$app->get('/todo/delete/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::deleteTodoById($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/delete/{id}', DeleteTodoAction::class)->setName('edit-todo');
 
 // Tick todo
-$app->get('/todo/finished/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::setTodoToFinished($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/finished/{id}', MarkTodoAsDoneAction::class)->setName('edit-todo');
 
 // Untick todo
-$app->get('/todo/un-finish/{id}', function (Request $request, Response $response, $args) use ($db) {
-    TodoService::setTodoToUnFinished($db, $args['id']);
-    return $response->withHeader('Location', '/')->withStatus(302);
-})->setName('edit-todo');
+$app->get('/todo/un-finish/{id}', MarkTodoAsUnDoneAction::class)->setName('edit-todo');
 
 // Run app
 $app->run();
