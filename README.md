@@ -1,5 +1,7 @@
 # Simple todolist with slim
 
+> v0.1.3 <!-- x-release-please-version -->
+
 ## Dev
 
 ```bash
