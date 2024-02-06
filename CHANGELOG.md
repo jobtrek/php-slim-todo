@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.1.4](https://github.com/jobtrek/php-slim-todo/compare/v0.1.3...v0.1.4) (2024-02-06)
+
+
+### Miscellaneous Chores
+
+* add dependabot configuration ([#10](https://github.com/jobtrek/php-slim-todo/issues/10)) ([2116f10](https://github.com/jobtrek/php-slim-todo/commit/2116f10f5e13012c6aaa5f87eac5cbfed91d0781))
+
+
+### Styles
+
+* coherent action names ([#5](https://github.com/jobtrek/php-slim-todo/issues/5)) ([6dff45e](https://github.com/jobtrek/php-slim-todo/commit/6dff45eeea6e364c7878d2e608df2dfdf3cb5165))
+* fix phpstan inspections ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+
+
+### Refactors
+
+* Move create todo post to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move delete todo action to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move done todos page to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move done/undone todo action to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move edit todo page to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move homepage closure to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* Move update todo action to invokable class ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419))
+* **routes-actions:** move route closures to invokable classes ([#9](https://github.com/jobtrek/php-slim-todo/issues/9)) ([f377898](https://github.com/jobtrek/php-slim-todo/commit/f377898694bcab400f441f468f4833fb19b99419)), closes [#7](https://github.com/jobtrek/php-slim-todo/issues/7)
+
+
+### Build System
+
+* **deps:** bump nesbot/carbon from 3.0.0 to 3.0.1 ([#12](https://github.com/jobtrek/php-slim-todo/issues/12)) ([048054c](https://github.com/jobtrek/php-slim-todo/commit/048054c6f9d3def4cfd8853f5d1760d21c347897))
+
+
+### Continuous Integration
+
+* update release please configuration ([#13](https://github.com/jobtrek/php-slim-todo/issues/13)) ([39ef60a](https://github.com/jobtrek/php-slim-todo/commit/39ef60acafaa65efa05b94f3c24232417fbf9ece))
+
 ## [0.1.3](https://github.com/jobtrek/php-slim-todo/compare/v0.1.2...v0.1.3) (2024-02-03)
 
 
