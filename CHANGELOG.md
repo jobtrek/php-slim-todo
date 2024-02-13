@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/jobtrek/php-slim-todo/compare/v0.1.4...v0.1.5) (2024-02-13)
+
+
+### Build System
+
+* **deps:** bump nesbot/carbon from 3.0.1 to 3.0.2 ([#14](https://github.com/jobtrek/php-slim-todo/issues/14)) ([8da6da8](https://github.com/jobtrek/php-slim-todo/commit/8da6da8d85424a1799f70dc2617bc5eb8e84ed2d))
+
 ## [0.1.4](https://github.com/jobtrek/php-slim-todo/compare/v0.1.3...v0.1.4) (2024-02-06)
 
 
