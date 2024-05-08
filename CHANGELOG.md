@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.14](https://github.com/jobtrek/php-slim-todo/compare/v0.1.13...v0.1.14) (2024-05-08)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.15.2 to 1.15.3 ([#47](https://github.com/jobtrek/php-slim-todo/issues/47)) ([4e9c71e](https://github.com/jobtrek/php-slim-todo/commit/4e9c71e3c850c9633d1d0cf61a0c7f2615d99b6e))
+* **deps:** bump nesbot/carbon from 3.3.0 to 3.3.1 ([#46](https://github.com/jobtrek/php-slim-todo/issues/46)) ([721b35e](https://github.com/jobtrek/php-slim-todo/commit/721b35e287e9fcc5f532641a92b334ddeddacc55))
+* **deps:** bump slim/twig-view from 3.3.0 to 3.4.0 ([#45](https://github.com/jobtrek/php-slim-todo/issues/45)) ([cb692aa](https://github.com/jobtrek/php-slim-todo/commit/cb692aa68b0c7c53651fa43a1cb5c6702185e43a))
+
 ## [0.1.13](https://github.com/jobtrek/php-slim-todo/compare/v0.1.12...v0.1.13) (2024-04-30)
 
 
