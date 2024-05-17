@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.15](https://github.com/jobtrek/php-slim-todo/compare/v0.1.14...v0.1.15) (2024-05-17)
+
+
+### Miscellaneous Chores
+
+* **deps:** change release-please path to new repo ([#51](https://github.com/jobtrek/php-slim-todo/issues/51)) ([770544d](https://github.com/jobtrek/php-slim-todo/commit/770544d02934d9c457be4543e23ea73e2454ec7f))
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan from 1.10.67 to 1.11.0 ([#49](https://github.com/jobtrek/php-slim-todo/issues/49)) ([1a0f440](https://github.com/jobtrek/php-slim-todo/commit/1a0f440f4ee7170d82242c995a7f4dd5716838c6))
+
 ## [0.1.14](https://github.com/jobtrek/php-slim-todo/compare/v0.1.13...v0.1.14) (2024-05-08)
 
 
