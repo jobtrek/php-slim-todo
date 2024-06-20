@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.20](https://github.com/jobtrek/php-slim-todo/compare/v0.1.19...v0.1.20) (2024-06-20)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.16.0 to 1.16.1 ([#70](https://github.com/jobtrek/php-slim-todo/issues/70)) ([5b8b5c6](https://github.com/jobtrek/php-slim-todo/commit/5b8b5c6e925ea2acce9b8b610f9f0e47f27b5d00))
+
+
+### Continuous Integration
+
+* add github-actions to dependabot checks ([#68](https://github.com/jobtrek/php-slim-todo/issues/68)) ([7d84cca](https://github.com/jobtrek/php-slim-todo/commit/7d84ccaf3cb19299e01efaf46746e14158d98e5e))
+
 ## [0.1.19](https://github.com/jobtrek/php-slim-todo/compare/v0.1.18...v0.1.19) (2024-06-18)
 
 
