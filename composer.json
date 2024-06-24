@@ -1,7 +1,7 @@
 {
     "name": "jobtrek/php-slim-todo",
     "type": "project",
-    "version": "0.1.20",
+    "version": "0.1.21",
     "autoload": {
         "psr-4": {
             "Jobtrek\\PhpSlimTodo\\": "src/"
