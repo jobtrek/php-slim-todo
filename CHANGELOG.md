@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.22](https://github.com/jobtrek/php-slim-todo/compare/v0.1.21...v0.1.22) (2024-06-28)
+
+
+### Continuous Integration
+
+* merge lint and static analysis workflow to a dedicated ci workflow ([#74](https://github.com/jobtrek/php-slim-todo/issues/74)) ([e7d5e6d](https://github.com/jobtrek/php-slim-todo/commit/e7d5e6df2c69a42a33ccba474d27a63dde930795))
+
 ## [0.1.21](https://github.com/jobtrek/php-slim-todo/compare/v0.1.20...v0.1.21) (2024-06-24)
 
 
