@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.23](https://github.com/jobtrek/php-slim-todo/compare/v0.1.22...v0.1.23) (2024-07-03)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan from 1.11.5 to 1.11.6 ([#76](https://github.com/jobtrek/php-slim-todo/issues/76)) ([ba93fc5](https://github.com/jobtrek/php-slim-todo/commit/ba93fc54a8d818091132f5194294e9e2e6567b2f))
+* **deps:** bump symfony/var-dumper from 7.1.1 to 7.1.2 ([#77](https://github.com/jobtrek/php-slim-todo/issues/77)) ([a043e46](https://github.com/jobtrek/php-slim-todo/commit/a043e463bbb9a1f6fbcd569773093c51ba08b4e9))
+
 ## [0.1.22](https://github.com/jobtrek/php-slim-todo/compare/v0.1.21...v0.1.22) (2024-06-28)
 
 
