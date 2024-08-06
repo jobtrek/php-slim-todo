@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.25](https://github.com/jobtrek/php-slim-todo/compare/v0.1.24...v0.1.25) (2024-08-06)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.16.1 to 1.17.1 ([#88](https://github.com/jobtrek/php-slim-todo/issues/88)) ([d4ae518](https://github.com/jobtrek/php-slim-todo/commit/d4ae518d5b6592420140a2b69fc007b038e14ff4))
+* **deps-dev:** bump phpstan/phpstan from 1.11.7 to 1.11.9 ([#87](https://github.com/jobtrek/php-slim-todo/issues/87)) ([5714ac4](https://github.com/jobtrek/php-slim-todo/commit/5714ac4628cebed8d13b55a565b802caa260c6ef))
+* **deps:** bump guzzlehttp/psr7 from 2.6.2 to 2.7.0 ([#83](https://github.com/jobtrek/php-slim-todo/issues/83)) ([b37780e](https://github.com/jobtrek/php-slim-todo/commit/b37780e1545979d6613077b74ea8f0712e971425))
+* **deps:** bump nesbot/carbon from 3.6.0 to 3.7.0 ([#82](https://github.com/jobtrek/php-slim-todo/issues/82)) ([47d2607](https://github.com/jobtrek/php-slim-todo/commit/47d260736800e97971641271745a0650586c91ad))
+* **deps:** bump symfony/var-dumper from 7.1.2 to 7.1.3 ([#85](https://github.com/jobtrek/php-slim-todo/issues/85)) ([104d17a](https://github.com/jobtrek/php-slim-todo/commit/104d17a0460bfb8adce66bbf70f2a2dfc4e28457))
+
 ## [0.1.24](https://github.com/jobtrek/php-slim-todo/compare/v0.1.23...v0.1.24) (2024-07-09)
 
 
