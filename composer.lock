@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cebc766b61cb782b2fe69a92da98490f",
+    "content-hash": "b56417f377f330198a0f708cf5ed9763",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.1.5",
+            "version": "v7.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "e20e03889539fd4e4211e14d2179226c513c010d"
+                "reference": "cb5bd55a6b8c2c1c7fb68b0aeae0e257948a720c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e20e03889539fd4e4211e14d2179226c513c010d",
-                "reference": "e20e03889539fd4e4211e14d2179226c513c010d",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/cb5bd55a6b8c2c1c7fb68b0aeae0e257948a720c",
+                "reference": "cb5bd55a6b8c2c1c7fb68b0aeae0e257948a720c",
                 "shasum": ""
             },
             "require": {
@@ -1633,7 +1633,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.1.5"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.1.6"
             },
             "funding": [
                 {
@@ -1649,7 +1649,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-16T10:07:02+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "twig/twig",
