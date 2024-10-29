@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.33](https://github.com/jobtrek/php-slim-todo/compare/v0.1.32...v0.1.33) (2024-10-29)
+
+
+### Build System
+
+* **deps:** bump symfony/var-dumper from 7.1.5 to 7.1.6 ([#114](https://github.com/jobtrek/php-slim-todo/issues/114)) ([3511a5b](https://github.com/jobtrek/php-slim-todo/commit/3511a5bc6785f5c0c62d89df70df7d816f2e1c2c))
+
 ## [0.1.32](https://github.com/jobtrek/php-slim-todo/compare/v0.1.31...v0.1.32) (2024-10-24)
 
 
