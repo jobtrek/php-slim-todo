@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.33](https://github.com/jobtrek/php-slim-todo/compare/v0.1.32...v0.1.33) (2024-11-07)
+
+
+### Build System
+
+* **deps:** bump nesbot/carbon from 3.8.0 to 3.8.1 ([#116](https://github.com/jobtrek/php-slim-todo/issues/116)) ([94b2848](https://github.com/jobtrek/php-slim-todo/commit/94b2848eecf9e99da0f6254378f6370e2ce70894))
+* **deps:** bump symfony/var-dumper from 7.1.5 to 7.1.6 ([#114](https://github.com/jobtrek/php-slim-todo/issues/114)) ([3511a5b](https://github.com/jobtrek/php-slim-todo/commit/3511a5bc6785f5c0c62d89df70df7d816f2e1c2c))
+* **deps:** bump twig/twig from 3.14.0 to 3.14.1 ([#117](https://github.com/jobtrek/php-slim-todo/issues/117)) ([2e30bf3](https://github.com/jobtrek/php-slim-todo/commit/2e30bf35be67a11e7ae487eaf460d6f7cd747a9b))
+
 ## [0.1.32](https://github.com/jobtrek/php-slim-todo/compare/v0.1.31...v0.1.32) (2024-10-24)
 
 
