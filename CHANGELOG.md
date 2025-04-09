@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.46](https://github.com/jobtrek/php-slim-todo/compare/v0.1.45...v0.1.46) (2025-04-09)
+
+
+### Build System
+
+* **deps:** bump nesbot/carbon from 3.8.6 to 3.9.0 ([#156](https://github.com/jobtrek/php-slim-todo/issues/156)) ([2773590](https://github.com/jobtrek/php-slim-todo/commit/27735906cd31f93ca3a0773f382c7447bee79e46))
+
 ## [0.1.45](https://github.com/jobtrek/php-slim-todo/compare/v0.1.44...v0.1.45) (2025-04-02)
 
 
