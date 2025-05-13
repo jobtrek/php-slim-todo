@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.50](https://github.com/jobtrek/php-slim-todo/compare/v0.1.49...v0.1.50) (2025-05-13)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.22.0 to 1.22.1 ([#167](https://github.com/jobtrek/php-slim-todo/issues/167)) ([88b64cc](https://github.com/jobtrek/php-slim-todo/commit/88b64ccb676517fecc30d049639552a49fcaffdf))
+
 ## [0.1.49](https://github.com/jobtrek/php-slim-todo/compare/v0.1.48...v0.1.49) (2025-05-07)
 
 
