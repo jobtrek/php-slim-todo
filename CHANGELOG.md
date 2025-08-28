@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.60](https://github.com/jobtrek/php-slim-todo/compare/v0.1.59...v0.1.60) (2025-08-28)
+
+
+### Build System
+
+* **deps:** bump guzzlehttp/psr7 from 2.7.1 to 2.8.0 ([#192](https://github.com/jobtrek/php-slim-todo/issues/192)) ([89c30f2](https://github.com/jobtrek/php-slim-todo/commit/89c30f2a00c27cf6be18b1701e62289c7028db64))
+* **deps:** bump slim/slim from 4.14.0 to 4.15.0 ([#191](https://github.com/jobtrek/php-slim-todo/issues/191)) ([73fd692](https://github.com/jobtrek/php-slim-todo/commit/73fd6923180972eb795365874e6d1644fb52d534))
+
 ## [0.1.59](https://github.com/jobtrek/php-slim-todo/compare/v0.1.58...v0.1.59) (2025-08-15)
 
 
