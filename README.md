@@ -1,6 +1,6 @@
 # Simple todolist with slim
 
-> v0.1.66 <!-- x-release-please-version -->
+> v0.1.67 <!-- x-release-please-version -->
 
 ## Dev
 

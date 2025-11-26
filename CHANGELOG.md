@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.67](https://github.com/jobtrek/php-slim-todo/compare/v0.1.66...v0.1.67) (2025-11-26)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan from 2.1.31 to 2.1.32 ([#211](https://github.com/jobtrek/php-slim-todo/issues/211)) ([f3cd70b](https://github.com/jobtrek/php-slim-todo/commit/f3cd70bcc97b84d71454add4cc63a271e40fb0f5))
+* **deps:** bump actions/checkout from 5 to 6 ([#210](https://github.com/jobtrek/php-slim-todo/issues/210)) ([12a0b1b](https://github.com/jobtrek/php-slim-todo/commit/12a0b1b19f8d2142421316640d9f40216da86476))
+* **deps:** bump slim/slim from 4.15.0 to 4.15.1 ([#212](https://github.com/jobtrek/php-slim-todo/issues/212)) ([b3adefd](https://github.com/jobtrek/php-slim-todo/commit/b3adefd608c70a6dfbc02de686457a22f08cccbf))
+
 ## [0.1.66](https://github.com/jobtrek/php-slim-todo/compare/v0.1.65...v0.1.66) (2025-11-04)
 
 
