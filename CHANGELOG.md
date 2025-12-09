@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.69](https://github.com/jobtrek/php-slim-todo/compare/v0.1.68...v0.1.69) (2025-12-09)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan from 2.1.32 to 2.1.33 ([#217](https://github.com/jobtrek/php-slim-todo/issues/217)) ([4f601a2](https://github.com/jobtrek/php-slim-todo/commit/4f601a253f7ec5826a533c8a476b70fb66b0a0cf))
+* **deps:** bump nesbot/carbon from 3.10.3 to 3.11.0 ([#216](https://github.com/jobtrek/php-slim-todo/issues/216)) ([70de411](https://github.com/jobtrek/php-slim-todo/commit/70de411e9d0eee44fd21222b366421930af9bbdc))
+
 ## [0.1.68](https://github.com/jobtrek/php-slim-todo/compare/v0.1.67...v0.1.68) (2025-12-03)
 
 
