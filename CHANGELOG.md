@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.73](https://github.com/jobtrek/php-slim-todo/compare/v0.1.72...v0.1.73) (2026-02-17)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.27.0 to 1.27.1 ([#227](https://github.com/jobtrek/php-slim-todo/issues/227)) ([11c8942](https://github.com/jobtrek/php-slim-todo/commit/11c8942b4bd168eb203770410536a18a4ae62166))
+* **deps-dev:** bump phpstan/phpstan from 2.1.38 to 2.1.39 ([#228](https://github.com/jobtrek/php-slim-todo/issues/228)) ([f62c1a7](https://github.com/jobtrek/php-slim-todo/commit/f62c1a7923521777fa97ba2d5a5815d3e70618d2))
+
 ## [0.1.72](https://github.com/jobtrek/php-slim-todo/compare/v0.1.71...v0.1.72) (2026-02-03)
 
 
