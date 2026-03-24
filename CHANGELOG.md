@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.76](https://github.com/jobtrek/php-slim-todo/compare/v0.1.75...v0.1.76) (2026-03-24)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan from 2.1.41 to 2.1.42 ([#237](https://github.com/jobtrek/php-slim-todo/issues/237)) ([78751d4](https://github.com/jobtrek/php-slim-todo/commit/78751d472c524acca759daa1e5ea8e294a8356ad))
+
 ## [0.1.75](https://github.com/jobtrek/php-slim-todo/compare/v0.1.74...v0.1.75) (2026-03-17)
 
 
