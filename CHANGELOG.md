@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.80](https://github.com/jobtrek/php-slim-todo/compare/v0.1.79...v0.1.80) (2026-05-01)
+
+
+### Miscellaneous Chores
+
+* dependabot groups ([#252](https://github.com/jobtrek/php-slim-todo/issues/252)) ([8008436](https://github.com/jobtrek/php-slim-todo/commit/80084361e5f666e723013507d46f1db90c14918c))
+* release please include author ([#251](https://github.com/jobtrek/php-slim-todo/issues/251)) ([9f17736](https://github.com/jobtrek/php-slim-todo/commit/9f17736c8c5ab25aeaaea8e240b6ed93566ff509))
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan ([#253](https://github.com/jobtrek/php-slim-todo/issues/253)) ([72831ff](https://github.com/jobtrek/php-slim-todo/commit/72831fff9258237b85a28b0fa24522a2bb7b9353))
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#249](https://github.com/jobtrek/php-slim-todo/issues/249)) ([77c157c](https://github.com/jobtrek/php-slim-todo/commit/77c157ce2739d2c5fddbcbe9bd915106c67b86cb))
+
 ## [0.1.79](https://github.com/jobtrek/php-slim-todo/compare/v0.1.78...v0.1.79) (2026-04-21)
 
 
