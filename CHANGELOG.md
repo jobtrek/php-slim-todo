@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.81](https://github.com/jobtrek/php-slim-todo/compare/v0.1.80...v0.1.81) (2026-05-20)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan ([#254](https://github.com/jobtrek/php-slim-todo/issues/254)) ([23d7972](https://github.com/jobtrek/php-slim-todo/commit/23d7972ccccba3caf67fd860041a53dc01fc8d5d))
+* **deps:** bump picomatch from 2.3.1 to 2.3.2 ([#256](https://github.com/jobtrek/php-slim-todo/issues/256)) ([566efce](https://github.com/jobtrek/php-slim-todo/commit/566efced9bcf13d6522ac041fc7407c9fb6da0d5))
+
 ## [0.1.80](https://github.com/jobtrek/php-slim-todo/compare/v0.1.79...v0.1.80) (2026-05-01)
 
 
