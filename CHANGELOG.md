@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.82](https://github.com/jobtrek/php-slim-todo/compare/v0.1.81...v0.1.82) (2026-05-22)
+
+
+### Build System
+
+* **deps:** bump lodash from 4.17.21 to 4.18.1 (via audit fix) ([#257](https://github.com/jobtrek/php-slim-todo/issues/257)) ([779576d](https://github.com/jobtrek/php-slim-todo/commit/779576d1763aacf5ad6333a70b3cbceed1780ce9))
+* **deps:** bump minimatch from 9.0.3 to 9.0.9 ([#260](https://github.com/jobtrek/php-slim-todo/issues/260)) ([b32aee3](https://github.com/jobtrek/php-slim-todo/commit/b32aee34334072d6ba34e1c8de9047b69900ba7d))
+* **deps:** bump tmp from 0.0.33 to 0.2.5 (via audit fix) ([#261](https://github.com/jobtrek/php-slim-todo/issues/261)) ([fafbb3d](https://github.com/jobtrek/php-slim-todo/commit/fafbb3d09dfb9d461280e5536cb9bb44ef31004d))
+* **deps:** bump twig/twig from 3.14.1 to 3.26.0 ([#258](https://github.com/jobtrek/php-slim-todo/issues/258)) ([ebb9bd6](https://github.com/jobtrek/php-slim-todo/commit/ebb9bd67faa60b989123e4cda000bea44590a39d))
+
 ## [0.1.81](https://github.com/jobtrek/php-slim-todo/compare/v0.1.80...v0.1.81) (2026-05-20)
 
 
