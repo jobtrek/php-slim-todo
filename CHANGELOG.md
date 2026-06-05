@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.84](https://github.com/jobtrek/php-slim-todo/compare/v0.1.83...v0.1.84) (2026-06-05)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan ([#265](https://github.com/jobtrek/php-slim-todo/issues/265)) ([e356cab](https://github.com/jobtrek/php-slim-todo/commit/e356cabce889277abb5750901e4b862af9a0ee05))
+* **deps:** bump guzzlehttp/psr7 in the production-dependencies group ([#264](https://github.com/jobtrek/php-slim-todo/issues/264)) ([ee6bcf9](https://github.com/jobtrek/php-slim-todo/commit/ee6bcf9655dc2d8674b1ec3571a14a99e158ebca))
+
 ## [0.1.83](https://github.com/jobtrek/php-slim-todo/compare/v0.1.82...v0.1.83) (2026-05-26)
 
 
