@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.86](https://github.com/jobtrek/php-slim-todo/compare/v0.1.85...v0.1.86) (2026-06-26)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint in the development-dependencies group ([#273](https://github.com/jobtrek/php-slim-todo/issues/273)) ([b0263a0](https://github.com/jobtrek/php-slim-todo/commit/b0263a09617c294a21506b692fabf13bcb95e44b))
+* **deps:** bump actions/checkout from 6 to 7 ([#271](https://github.com/jobtrek/php-slim-todo/issues/271)) ([0d97fb3](https://github.com/jobtrek/php-slim-todo/commit/0d97fb3010f88e8a2e7f8dd4a7c4490bb2f638d5))
+* **deps:** bump guzzlehttp/psr7 from 2.11.0 to 2.12.1 ([#270](https://github.com/jobtrek/php-slim-todo/issues/270)) ([8f393f9](https://github.com/jobtrek/php-slim-todo/commit/8f393f94cbbab97c18d0fee052cb66e182b75957))
+* **deps:** bump the production-dependencies group with 2 updates ([#272](https://github.com/jobtrek/php-slim-todo/issues/272)) ([2b7568e](https://github.com/jobtrek/php-slim-todo/commit/2b7568e950e82a6c4d733fa9c3fb73c844c2ab1c))
+
 ## [0.1.85](https://github.com/jobtrek/php-slim-todo/compare/v0.1.84...v0.1.85) (2026-06-16)
 
 
