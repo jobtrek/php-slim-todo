@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.87](https://github.com/jobtrek/php-slim-todo/compare/v0.1.86...v0.1.87) (2026-07-01)
+
+
+### Build System
+
+* **deps:** bump guzzlehttp/psr7 in the production-dependencies group ([#275](https://github.com/jobtrek/php-slim-todo/issues/275)) ([46a30ec](https://github.com/jobtrek/php-slim-todo/commit/46a30ec7c1a76ca03da627af0d75276fdd61297b))
+
 ## [0.1.86](https://github.com/jobtrek/php-slim-todo/compare/v0.1.85...v0.1.86) (2026-06-26)
 
 
