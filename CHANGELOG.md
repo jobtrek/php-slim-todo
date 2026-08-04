@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.88](https://github.com/jobtrek/php-slim-todo/compare/v0.1.87...v0.1.88) (2026-08-04)
+
+
+### Build System
+
+* **deps-dev:** bump the development-dependencies group across 1 directory with 2 updates ([#281](https://github.com/jobtrek/php-slim-todo/issues/281)) ([3ffbd9e](https://github.com/jobtrek/php-slim-todo/commit/3ffbd9e8eeac38694b6460cc1c88a19e38037e5e))
+* **deps:** bump nesbot/carbon ([#280](https://github.com/jobtrek/php-slim-todo/issues/280)) ([0711d6a](https://github.com/jobtrek/php-slim-todo/commit/0711d6a152fdbbf066bbbe6b32ee73cdf61d47e9))
+* **deps:** bump twig/twig from 3.26.0 to 3.27.1 ([#277](https://github.com/jobtrek/php-slim-todo/issues/277)) ([53ef911](https://github.com/jobtrek/php-slim-todo/commit/53ef911f6981eaeda8ad601f915f69a5af2dbced))
+
 ## [0.1.87](https://github.com/jobtrek/php-slim-todo/compare/v0.1.86...v0.1.87) (2026-07-01)
 
 
