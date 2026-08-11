@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.89](https://github.com/jobtrek/php-slim-todo/compare/v0.1.88...v0.1.89) (2026-08-11)
+
+
+### Build System
+
+* **deps-dev:** bump the development-dependencies group across 1 directory with 2 updates ([#283](https://github.com/jobtrek/php-slim-todo/issues/283)) ([70dcca6](https://github.com/jobtrek/php-slim-todo/commit/70dcca67720fb6d03789e81807f1005f171d75d1))
+* **deps:** bump guzzlehttp/psr7 from 2.12.3 to 3.0.0 ([#284](https://github.com/jobtrek/php-slim-todo/issues/284)) ([b66213b](https://github.com/jobtrek/php-slim-todo/commit/b66213ba6d9723afb769a17538435cd6b199a592))
+
 ## [0.1.88](https://github.com/jobtrek/php-slim-todo/compare/v0.1.87...v0.1.88) (2026-08-04)
 
 
