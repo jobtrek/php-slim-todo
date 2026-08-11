@@ -17,7 +17,7 @@
         "php": "^8.3",
         "ext-pdo": "*",
         "slim/slim": "^4.12",
-        "guzzlehttp/psr7": "^2.6",
+        "guzzlehttp/psr7": "^3.0",
         "slim/twig-view": "^3.3",
         "symfony/var-dumper": "^7.0",
         "nesbot/carbon": "^3.0"
