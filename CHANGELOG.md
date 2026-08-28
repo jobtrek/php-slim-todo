@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.90](https://github.com/jobtrek/php-slim-todo/compare/v0.1.89...v0.1.90) (2026-08-28)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint in the development-dependencies group ([#287](https://github.com/jobtrek/php-slim-todo/issues/287)) ([b4d6f5d](https://github.com/jobtrek/php-slim-todo/commit/b4d6f5dd636aa20133cb9d266df61667cf739fca))
+* **deps:** bump nesbot/carbon in the production-dependencies group ([#286](https://github.com/jobtrek/php-slim-todo/issues/286)) ([9feb744](https://github.com/jobtrek/php-slim-todo/commit/9feb74487789d7f59d6d440326711ec5cf98a144))
+
 ## [0.1.89](https://github.com/jobtrek/php-slim-todo/compare/v0.1.88...v0.1.89) (2026-08-11)
 
 
