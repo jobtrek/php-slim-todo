@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.92](https://github.com/jobtrek/php-slim-todo/compare/v0.1.91...v0.1.92) (2026-09-15)
+
+
+### Build System
+
+* **deps-dev:** bump the development-dependencies group across 1 directory with 2 updates ([#294](https://github.com/jobtrek/php-slim-todo/issues/294)) ([f63f741](https://github.com/jobtrek/php-slim-todo/commit/f63f7413990de0b912cb9571583b432d6815e68c))
+* **deps:** bump the production-dependencies group across 1 directory with 2 updates ([#295](https://github.com/jobtrek/php-slim-todo/issues/295)) ([ff6fb29](https://github.com/jobtrek/php-slim-todo/commit/ff6fb299a680e92c115ee4e4aa6a5f045cc61866))
+
 ## [0.1.91](https://github.com/jobtrek/php-slim-todo/compare/v0.1.90...v0.1.91) (2026-09-04)
 
 
