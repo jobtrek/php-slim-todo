@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.93](https://github.com/jobtrek/php-slim-todo/compare/v0.1.92...v0.1.93) (2026-10-12)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan ([#298](https://github.com/jobtrek/php-slim-todo/issues/298)) ([c01e6b2](https://github.com/jobtrek/php-slim-todo/commit/c01e6b26dee6312e4facbb1fbf5cc258b83e1598))
+* **deps:** bump fast-uri from 3.1.2 to 3.1.8 ([#300](https://github.com/jobtrek/php-slim-todo/issues/300)) ([e52d3c2](https://github.com/jobtrek/php-slim-todo/commit/e52d3c23e6efe52d52f118c882f06b3f898ac1d7))
+* **deps:** bump nesbot/carbon in the production-dependencies group ([#297](https://github.com/jobtrek/php-slim-todo/issues/297)) ([d3a08e1](https://github.com/jobtrek/php-slim-todo/commit/d3a08e16a9afe7f372f90b14c7651dd40465432d))
+* **deps:** bump source-map-js from 1.2.1 to 1.2.2 ([#301](https://github.com/jobtrek/php-slim-todo/issues/301)) ([e0bb204](https://github.com/jobtrek/php-slim-todo/commit/e0bb20402fcbdb25467da2df8540983390f95259))
+
 ## [0.1.92](https://github.com/jobtrek/php-slim-todo/compare/v0.1.91...v0.1.92) (2026-09-15)
 
 
