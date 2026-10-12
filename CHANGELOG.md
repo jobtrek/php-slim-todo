@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.94](https://github.com/jobtrek/php-slim-todo/compare/v0.1.93...v0.1.94) (2026-10-12)
+
+
+### Build System
+
+* **deps:** bump nanoid from 3.3.12 to 3.3.20 ([#303](https://github.com/jobtrek/php-slim-todo/issues/303)) ([937416b](https://github.com/jobtrek/php-slim-todo/commit/937416bf72b1da7dd2c095eb18cd406936ae1358))
+* **deps:** bump postcss from 8.5.15 to 8.5.29 ([#302](https://github.com/jobtrek/php-slim-todo/issues/302)) ([c96c81c](https://github.com/jobtrek/php-slim-todo/commit/c96c81c0d09ec983e013fb48c67ad4c91df390d9))
+
 ## [0.1.93](https://github.com/jobtrek/php-slim-todo/compare/v0.1.92...v0.1.93) (2026-10-12)
 
 
