@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.96](https://github.com/jobtrek/php-slim-todo/compare/v0.1.95...v0.1.96) (2026-11-04)
+
+
+### Build System
+
+* **deps:** bump js-yaml from 4.1.1 to 4.3.2 ([#311](https://github.com/jobtrek/php-slim-todo/issues/311)) ([c0cfdea](https://github.com/jobtrek/php-slim-todo/commit/c0cfdea22a67df1869ed79d9d90288a4bbdc8aa8))
+
 ## [0.1.95](https://github.com/jobtrek/php-slim-todo/compare/v0.1.94...v0.1.95) (2026-11-04)
 
 
