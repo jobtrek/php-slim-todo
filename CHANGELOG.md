@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.95](https://github.com/jobtrek/php-slim-todo/compare/v0.1.94...v0.1.95) (2026-11-04)
+
+
+### Build System
+
+* **deps-dev:** bump phpstan/phpstan ([#306](https://github.com/jobtrek/php-slim-todo/issues/306)) ([2949401](https://github.com/jobtrek/php-slim-todo/commit/294940106af12b93aa25858d5074914d6e57cec4))
+* **deps:** bump fast-uri from 3.1.8 to 3.1.9 ([#308](https://github.com/jobtrek/php-slim-todo/issues/308)) ([7e99962](https://github.com/jobtrek/php-slim-todo/commit/7e999624bc9e147672d072992a604c5650b62617))
+* **deps:** bump postcss-selector-parser from 6.0.15 to 6.1.5 ([#309](https://github.com/jobtrek/php-slim-todo/issues/309)) ([5af34a6](https://github.com/jobtrek/php-slim-todo/commit/5af34a6ef159bf4798f6a4bc8322ddbb30fa0d29))
+* **deps:** bump the production-dependencies group across 1 directory with 2 updates ([#307](https://github.com/jobtrek/php-slim-todo/issues/307)) ([51d9789](https://github.com/jobtrek/php-slim-todo/commit/51d9789cd7a215532766fc3e7d108fefa195b33e))
+
 ## [0.1.94](https://github.com/jobtrek/php-slim-todo/compare/v0.1.93...v0.1.94) (2026-10-12)
 
 
