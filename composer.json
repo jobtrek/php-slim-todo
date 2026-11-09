@@ -19,7 +19,7 @@
         "slim/slim": "^4.12",
         "guzzlehttp/psr7": "^3.0",
         "slim/twig-view": "^3.3",
-        "symfony/var-dumper": "^7.0",
+        "symfony/var-dumper": "^8.1",
         "nesbot/carbon": "^3.0"
     },
     "require-dev": {
